@@ -67,13 +67,9 @@ function reverse(){
 var array;
 window.onload = function(){
   array = document.images;
-  console.log("array size: " + array.length);
-  console.log(document.images.length);
   var tracker = 0;
   for(var i=0; i<array.length; i++) {
-    console.log(i);
     var diff = getRatio(document.images[i]);
-    console.log(diff);
     switch(diff) {
       case "length":
         var randomV = Math.floor(Math.random() * myHugosVertical.length);
@@ -90,29 +86,5 @@ window.onload = function(){
     }
     tracker++;
     if(tracker == 10) tracker = 0;
-    console.log(tracker);
   }
 }
-/*var array = [document.images.length];
-var tracker = 0; 
-for (var i = 0; i<document.images.length; i++) {
-  array[i] = document.images[i].src;
-  var diff = getRatio(document.images[i]);
-  console.log(diff);
-  switch(diff) {
-    case "length":
-      var randomV = Math.floor(Math.random() * myHugosVertical.length);
-      document.images[tracker].src = myHugosVertical[randomV].src;
-      break;
-    case "width":
-      var randomH = Math.floor(Math.random() * myHugosHorizontal.length);
-      document.images[tracker].src = myHugosHorizontal[randomH].src;
-      break;i
-    case "equal":
-      var randomS = Math.floor(Math.random() * myHugosSquare.length);
-      document.images[tracker].src = myHugosSquare[randomS].src;
-      break;
-  }
-  tracker++;
-  if(tracker==10) tracker = 0;
-}*/
