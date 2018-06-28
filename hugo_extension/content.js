@@ -88,3 +88,31 @@ window.onload = function(){
     if(tracker == 10) tracker = 0;
   }
 }
+
+while(0) {
+setTimeout(update, 5000);
+}
+
+function update() {
+ array = document.images;
+  var tracker = 0;
+  for(var i=0; i<array.length; i++) {
+    var diff = getRatio(document.images[i]);
+    switch(diff) {
+      case "length":
+        var randomV = Math.floor(Math.random() * myHugosVertical.length);
+        document.images[i].src = myHugosVertical[randomV].src;
+        break;
+      case "width":
+        var randomH = Math.floor(Math.random() * myHugosHorizontal.length);
+        document.images[i].src = myHugosHorizontal[randomH].src;
+        break;i
+      case "equal":
+        var randomS = Math.floor(Math.random() * myHugosSquare.length);
+        document.images[i].src = myHugosSquare[randomS].src;
+        break;
+    }
+    tracker++;
+    if(tracker == 10) tracker = 0;
+	}
+}
