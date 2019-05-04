@@ -1,4 +1,4 @@
-# hugo-chrome-extension
+# hugo_chrome_extension
 
 Extension which changes all img tag on html pages to image of Hugo Reyes from Lost. 
 
